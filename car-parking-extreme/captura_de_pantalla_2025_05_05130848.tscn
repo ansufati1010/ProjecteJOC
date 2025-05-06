@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5xu6l12y3jen"]
+
+[ext_resource type="Texture2D" uid="uid://3531y6r68j1h" path="res://Captura de pantalla 2025-05-05 130848.png" id="1_euvjy"]
+[ext_resource type="Texture2D" uid="uid://bm0xm2gwac3oq" path="res://Captura de pantalla 2025-05-05 131008.png" id="2_psamv"]
+[ext_resource type="Texture2D" uid="uid://ckudgxqvk54h7" path="res://Captura de pantalla 2025-05-05 131053.png" id="3_wcejb"]
+
+[node name="CapturaDePantalla2025-05-05130848" type="Sprite2D"]
+position = Vector2(578.5, 324)
+scale = Vector2(1.125, 1.13542)
+texture = ExtResource("1_euvjy")
+
+[node name="CapturaDePantalla2025-05-05131008" type="Sprite2D" parent="."]
+position = Vector2(-384.444, 176.147)
+scale = Vector2(0.526936, 1.69044)
+texture = ExtResource("2_psamv")
+
+[node name="CapturaDePantalla2025-05-05131053" type="Sprite2D" parent="."]
+position = Vector2(-415.806, -251.009)
+scale = Vector2(2.84014, 0.697406)
+texture = ExtResource("3_wcejb")
+
+[node name="CapturaDePantalla2025-05-05131054" type="Sprite2D" parent="."]
+position = Vector2(53.0139, -251.009)
+scale = Vector2(3.52438, 0.818886)
+texture = ExtResource("3_wcejb")
+
+[node name="CapturaDePantalla2025-05-05131056" type="Sprite2D" parent="."]
+position = Vector2(469.729, -251.237)
+scale = Vector2(0.759921, 0.599533)
+texture = ExtResource("3_wcejb")
