@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://bvtao4n4ew4ni"]
+
+[ext_resource type="Texture2D" uid="uid://3531y6r68j1h" path="res://Captura de pantalla 2025-05-05 130848.png" id="1_7cuts"]
+[ext_resource type="Texture2D" uid="uid://bm0xm2gwac3oq" path="res://Captura de pantalla 2025-05-05 131008.png" id="2_emcp4"]
+[ext_resource type="Script" uid="uid://bku77xr5h6t38" path="res://cotxe.gd" id="3_ep5lw"]
+[ext_resource type="Texture2D" uid="uid://botbnxg5acnbm" path="res://image-Photoroom.png" id="4_jpj0s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psamv"]
+size = Vector2(1156, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcejb"]
+size = Vector2(935, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bcdc"]
+size = Vector2(21, 254)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhhk6"]
+size = Vector2(77, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmcj"]
+size = Vector2(76, 294)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mrr4"]
+size = Vector2(23, 252)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3fvo"]
+size = Vector2(79, 22)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3rp7"]
+radius = 25.0
+height = 86.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Fons" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(579.5, 323)
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("1_7cuts")
+
+[node name="Amagar" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(142.75, 557.75)
+scale = Vector2(0.390909, 1.04945)
+texture = ExtResource("2_emcp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(580.5, 43)
+shape = SubResource("RectangleShape2D_psamv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(691.5, 388)
+shape = SubResource("RectangleShape2D_wcejb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(957.5, 215)
+shape = SubResource("RectangleShape2D_8bcdc")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(261.5, 534)
+shape = SubResource("RectangleShape2D_nhhk6")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(50, 496)
+shape = SubResource("RectangleShape2D_lxmcj")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(46.5, 215)
+shape = SubResource("RectangleShape2D_4mrr4")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(154.5, 626)
+shape = SubResource("RectangleShape2D_r3fvo")
+
+[node name="Cotxe" type="CharacterBody2D" parent="."]
+position = Vector2(149, 564)
+script = ExtResource("3_ep5lw")
+
+[node name="Cotxe" type="Sprite2D" parent="Cotxe"]
+scale = Vector2(1.46429, 1.46429)
+texture = ExtResource("4_jpj0s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cotxe"]
+position = Vector2(-3, 2)
+shape = SubResource("CapsuleShape2D_j3rp7")
