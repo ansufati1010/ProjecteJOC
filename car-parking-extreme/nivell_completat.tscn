@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6415oh8fi4jj"]
+
+[ext_resource type="Texture2D" uid="uid://bumtntmlqfld4" path="res://you win.jpg" id="1_n8nwo"]
+[ext_resource type="Script" uid="uid://cwklb01hjhk1s" path="res://nivell_completat.gd" id="1_xjdvg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjdvg")
+
+[node name="YouWin" type="Sprite2D" parent="."]
+position = Vector2(546.125, 276.875)
+scale = Vector2(0.3675, 0.3675)
+texture = ExtResource("1_n8nwo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 307.0
+offset_top = 516.0
+offset_right = 785.0
+offset_bottom = 611.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 425.0
+offset_top = 525.0
+offset_right = 684.0
+offset_bottom = 602.0
+theme_override_font_sizes/font_size = 31
+text = "SEGÜENT NIVELL"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
