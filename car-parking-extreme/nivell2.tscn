@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://il06lru30uew"]
+[gd_scene load_steps=16 format=3 uid="uid://il06lru30uew"]
 
 [ext_resource type="Texture2D" uid="uid://dn1ds7ira2jm2" path="res://Captura de pantalla 2025-05-12 124026.png" id="1_swuyn"]
 [ext_resource type="Texture2D" uid="uid://bm0xm2gwac3oq" path="res://Captura de pantalla 2025-05-05 131008.png" id="2_4lg4f"]
 [ext_resource type="Texture2D" uid="uid://c11pki1wiqhfw" path="res://flecha.png" id="3_4lg4f"]
+[ext_resource type="Texture2D" uid="uid://cc5tnwuv3s56a" path="res://verd.png" id="3_f66ue"]
+[ext_resource type="Texture2D" uid="uid://en6gt3dhr8kg" path="res://Captura de pantalla 2025-05-15 131307.png" id="4_vuw40"]
+[ext_resource type="Texture2D" uid="uid://botbnxg5acnbm" path="res://image-Photoroom.png" id="6_eb24l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5iq2"]
 size = Vector2(243.495, 442.291)
@@ -28,6 +31,10 @@ size = Vector2(523, 31.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swuyn"]
 size = Vector2(41, 81.8819)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j4uim"]
+radius = 22.0
+height = 78.0
+
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -43,9 +50,19 @@ scale = Vector2(0.312121, 0.983516)
 texture = ExtResource("2_4lg4f")
 
 [node name="CapturaDePantalla2025-05-05131009" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(457, 449)
-scale = Vector2(1.20606, 0.664835)
+position = Vector2(457.75, 449)
+scale = Vector2(1.21515, 0.664835)
 texture = ExtResource("2_4lg4f")
+
+[node name="Verd" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(581, 454.5)
+scale = Vector2(0.333333, 0.27)
+texture = ExtResource("3_f66ue")
+
+[node name="CapturaDePantalla2025-05-15131307" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(563.25, 441)
+scale = Vector2(0.365383, 0.446154)
+texture = ExtResource("4_vuw40")
 
 [node name="Flecha" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(481, 360)
@@ -54,7 +71,7 @@ scale = Vector2(0.350394, 0.350394)
 texture = ExtResource("3_4lg4f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(596, 433.5)
+position = Vector2(596, 435)
 scale = Vector2(0.312121, 0.983516)
 shape = SubResource("RectangleShape2D_p5iq2")
 
@@ -106,7 +123,6 @@ shape = SubResource("RectangleShape2D_swuyn")
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(384.815, 561.657)
 rotation = 0.23911
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_swuyn")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
@@ -135,3 +151,14 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 35
 text = "APARCAUTOS"
+
+[node name="Cotxe2" type="CharacterBody2D" parent="."]
+
+[node name="Cotxe2" type="Sprite2D" parent="Cotxe2"]
+position = Vector2(678, 553)
+scale = Vector2(1.31633, 1.31633)
+texture = ExtResource("6_eb24l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cotxe2"]
+position = Vector2(675, 555)
+shape = SubResource("CapsuleShape2D_j4uim")

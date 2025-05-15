@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6415oh8fi4jj"]
+[gd_scene load_steps=4 format=3 uid="uid://c6415oh8fi4jj"]
 
 [ext_resource type="Texture2D" uid="uid://bumtntmlqfld4" path="res://you win.jpg" id="1_n8nwo"]
 [ext_resource type="Script" uid="uid://cwklb01hjhk1s" path="res://nivell_completat.gd" id="1_xjdvg"]
+[ext_resource type="Texture2D" uid="uid://klm2l1xtdth1" path="res://nivell1.png" id="2_ipayg"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,21 +13,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xjdvg")
 
+[node name="Nivell1" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.266667)
+position = Vector2(577, 330.25)
+scale = Vector2(1, 1.00845)
+texture = ExtResource("2_ipayg")
+
 [node name="YouWin" type="Sprite2D" parent="."]
-position = Vector2(546.125, 276.875)
+position = Vector2(578, 281)
 scale = Vector2(0.3675, 0.3675)
 texture = ExtResource("1_n8nwo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 307.0
+layout_mode = 0
+offset_left = 339.0
 offset_top = 516.0
-offset_right = 785.0
+offset_right = 817.0
 offset_bottom = 611.0
 
 [node name="Button" type="Button" parent="."]
-offset_left = 425.0
+layout_mode = 0
+offset_left = 457.0
 offset_top = 525.0
-offset_right = 684.0
+offset_right = 716.0
 offset_bottom = 602.0
 theme_override_font_sizes/font_size = 31
 text = "SEGÜENT NIVELL"

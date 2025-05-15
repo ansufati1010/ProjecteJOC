@@ -40,5 +40,7 @@ func _process(delta: float) -> void:
 func anima(direccio: Vector2, delta: float):
 	rotation = direccio.angle() + deg_to_rad(+90)
 
-func _on_area_2d_body_entered(body: CharacterBody2D):
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://nivell_completat.tscn")
