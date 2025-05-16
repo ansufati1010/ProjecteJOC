@@ -6,6 +6,7 @@ var acceleracio := 200.0
 var max_velocitat := 200.0
 var fregament := 300.0
 var voltes := 0
+var pot_moure := true 
 
 func voltes_portades():
 	voltes += 1
@@ -14,8 +15,12 @@ func _ready() -> void:
 	position = Vector2(152, 566)
 
 func _process(delta: float) -> void:
-	var mov = Input.get_axis("frena", "accelera")
+	if not pot_moure:
+		return  
 
+	var mov = Input.get_axis("frena", "accelera")
+	$CPUParticles2D.position = Vector2(750, 127)
+	
 	if mov != 0:
 		velocitat += mov * acceleracio * delta
 	else:
@@ -40,7 +45,12 @@ func _process(delta: float) -> void:
 func anima(direccio: Vector2, delta: float):
 	rotation = direccio.angle() + deg_to_rad(+90)
 
-
-
 func _on_area_2d_body_entered(body: Node2D):
+	velocitat = 0
+	pot_moure = false
+	$CPUParticles2D.global_position = body.global_position
+	$CPUParticles2D.emitting = true
+	$Timer.start()
+
+func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://nivell1_completat.tscn")

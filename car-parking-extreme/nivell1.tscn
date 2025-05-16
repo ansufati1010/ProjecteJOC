@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cunkrcewhlj8r"]
+[gd_scene load_steps=17 format=3 uid="uid://cunkrcewhlj8r"]
 
 [ext_resource type="Texture2D" uid="uid://3531y6r68j1h" path="res://Captura de pantalla 2025-05-05 130848.png" id="1_upbbb"]
 [ext_resource type="Texture2D" uid="uid://bm0xm2gwac3oq" path="res://Captura de pantalla 2025-05-05 131008.png" id="2_5p3xq"]
@@ -33,6 +33,10 @@ size = Vector2(45.25, 83.6917)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3rp7"]
 radius = 25.0
 height = 86.0
+
+[sub_resource type="Curve" id="Curve_upbbb"]
+_data = [Vector2(0.0795455, 0.988764), 0.0, 0.0, 0, 0, Vector2(0.931818, 0.41573), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ep5lw"]
 size = Vector2(15, 20)
@@ -145,6 +149,24 @@ visibility_layer = 3
 position = Vector2(-3, 2)
 shape = SubResource("CapsuleShape2D_j3rp7")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Cotxe"]
+position = Vector2(601, -437)
+emitting = false
+amount = 100
+lifetime = 3.0
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_upbbb")
+color = Color(0, 1, 0.0470588, 1)
+
+[node name="Timer" type="Timer" parent="Cotxe"]
+wait_time = 2.0
+
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(149, 563)
 collision_layer = 2
@@ -156,4 +178,5 @@ visibility_layer = 2
 position = Vector2(643, -450)
 shape = SubResource("RectangleShape2D_ep5lw")
 
+[connection signal="timeout" from="Cotxe/Timer" to="Cotxe" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Cotxe" method="_on_area_2d_body_entered"]

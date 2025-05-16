@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ctl5u304fmaus" path="res://nivell1_completat.gd" id="1_vsb1r"]
 [ext_resource type="Texture2D" uid="uid://fvg03jli3cxl" path="res://nivell1_captura.png" id="2_atlaq"]
 [ext_resource type="Texture2D" uid="uid://dyf3yyj6l46yb" path="res://you win2.png" id="3_8gcra"]
-[ext_resource type="Texture2D" uid="uid://cnqxk8tgjd88i" path="res://1000_F_26129358_7fXXs7Pz0emyjWl8qBetg1aVJ8ujUrWS.jpg" id="4_atlaq"]
+[ext_resource type="Texture2D" uid="uid://ngiatn678gj3" path="res://repeat.png" id="4_atlaq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,9 +33,9 @@ offset_bottom = 540.25
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 363.0
+offset_left = 365.0
 offset_top = 454.0
-offset_right = 622.0
+offset_right = 624.0
 offset_bottom = 531.0
 theme_override_font_sizes/font_size = 30
 text = "SEGÜENT NIVELL"
@@ -43,14 +43,14 @@ text = "SEGÜENT NIVELL"
 [node name="Button2" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 660.0
-offset_top = 456.0
-offset_right = 781.0
-offset_bottom = 529.0
+offset_left = 715.0
+offset_top = 457.0
+offset_right = 795.0
+offset_bottom = 525.0
 
-[node name="1000F261293587fXXs7Pz0EmyjWl8qBetg1aVj8UjUrWs" type="Sprite2D" parent="."]
-position = Vector2(721, 493)
-scale = Vector2(0.0885, 0.0885)
+[node name="Repeat" type="Sprite2D" parent="."]
+position = Vector2(757, 489)
+scale = Vector2(0.138672, 0.138672)
 texture = ExtResource("4_atlaq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

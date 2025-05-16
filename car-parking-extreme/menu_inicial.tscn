@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://q45tmcewfh5g"]
+[gd_scene load_steps=5 format=3 uid="uid://q45tmcewfh5g"]
 
 [ext_resource type="Script" uid="uid://bncg8iils8u8t" path="res://menu_inicial.gd" id="1_3exob"]
 [ext_resource type="Texture2D" uid="uid://ckudgxqvk54h7" path="res://Captura de pantalla 2025-05-05 131053.png" id="1_u4fxu"]
+[ext_resource type="Texture2D" uid="uid://ldl2hqjynsyp" path="res://volum_on.png" id="3_ttr8g"]
+[ext_resource type="AudioStream" uid="uid://3oivrlhoptyd" path="res://m98-339898.mp3" id="5_55v0k"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -31,7 +33,7 @@ offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
-text = "Nivell 1"
+text = "NIVELL 1"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
@@ -40,7 +42,7 @@ offset_top = 401.0
 offset_right = 825.0
 offset_bottom = 552.0
 theme_override_font_sizes/font_size = 50
-text = "Nivell 2"
+text = "NIVELL 2"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -78,5 +80,23 @@ theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 30
 text = "Diego Catalá, Oscar Almécija i Oriol Escudé"
 
+[node name="Button3" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 81.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_55v0k")
+autoplay = true
+
+[node name="VolumOn" type="Sprite2D" parent="."]
+position = Vector2(44, 44)
+scale = Vector2(0.139, 0.139)
+texture = ExtResource("3_ttr8g")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
