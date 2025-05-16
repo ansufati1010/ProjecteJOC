@@ -11,8 +11,7 @@ func voltes_portades():
 	voltes += 1
 
 func _ready() -> void:
-	position = Vector2(152, 566)
-
+	position = Vector2(675, 550)
 func _process(delta: float) -> void:
 	var mov = Input.get_axis("frena", "accelera")
 
@@ -42,5 +41,5 @@ func anima(direccio: Vector2, delta: float):
 
 
 
-func _on_area_2d_body_entered(body: Node2D):
-	get_tree().change_scene_to_file("res://nivell1_completat.tscn")
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://nivell2_completat.tscn")

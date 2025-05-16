@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://fbuxni1xkyop"]
+[gd_scene load_steps=5 format=3 uid="uid://fbuxni1xkyop"]
 
 [ext_resource type="Script" uid="uid://dilj7ckofktk" path="res://nivell_2_completat.gd" id="1_mox20"]
 [ext_resource type="Texture2D" uid="uid://8r10vx0kschp" path="res://nivell2_captura.png" id="2_wclbq"]
 [ext_resource type="Texture2D" uid="uid://dyf3yyj6l46yb" path="res://you win2.png" id="3_wu6xp"]
+[ext_resource type="Texture2D" uid="uid://cnqxk8tgjd88i" path="res://1000_F_26129358_7fXXs7Pz0emyjWl8qBetg1aVJ8ujUrWS.jpg" id="4_wclbq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,6 +25,7 @@ scale = Vector2(0.939751, 0.939751)
 texture = ExtResource("3_wu6xp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 341.0
 offset_top = 445.25
 offset_right = 816.0
@@ -36,13 +38,27 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -126.0
-offset_top = -189.0
-offset_right = 127.0
-offset_bottom = -121.0
+offset_left = -202.0
+offset_top = -190.0
+offset_right = 51.0
+offset_bottom = -122.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "TORNA AL MENÚ"
 
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 657.0
+offset_top = 457.0
+offset_right = 789.0
+offset_bottom = 525.0
+
+[node name="1000F261293587fXXs7Pz0EmyjWl8qBetg1aVj8UjUrWs" type="Sprite2D" parent="."]
+position = Vector2(723, 492)
+scale = Vector2(0.08775, 0.08775)
+texture = ExtResource("4_wclbq")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

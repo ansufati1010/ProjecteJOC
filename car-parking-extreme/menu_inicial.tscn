@@ -24,14 +24,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -247.0
-offset_top = -76.5
-offset_right = 247.0
-offset_bottom = 76.5
+offset_left = -246.0
+offset_top = -107.0
+offset_right = 248.0
+offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
-text = "COMENÇA A JUGAR"
+text = "Nivell 1"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 401.0
+offset_right = 825.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 50
+text = "Nivell 2"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -40,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -326.0
-offset_top = -227.5
-offset_right = 326.0
-offset_bottom = -90.5
+offset_left = -323.0
+offset_top = -271.0
+offset_right = 329.0
+offset_bottom = -134.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.933333, 0.976471, 0.027451, 1)
@@ -70,3 +79,4 @@ theme_override_font_sizes/font_size = 30
 text = "Diego Catalá, Oscar Almécija i Oriol Escudé"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

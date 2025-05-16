@@ -146,14 +146,14 @@ position = Vector2(-3, 2)
 shape = SubResource("CapsuleShape2D_j3rp7")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(149, 564)
+position = Vector2(149, 563)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(638.5, -449)
+position = Vector2(643, -450)
 shape = SubResource("RectangleShape2D_ep5lw")
 
 [connection signal="body_entered" from="Area2D" to="Cotxe" method="_on_area_2d_body_entered"]
